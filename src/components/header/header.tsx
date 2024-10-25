@@ -1,6 +1,7 @@
 import styles from './header.module.scss';
 import cx from 'classnames';
 import Q5U3ZLogomakrPng from '../../assets/4q5u3z-logomakr.png';
+import { Link } from '@remix-run/react';
 
 export interface HeaderProps {
     className?: string;
@@ -10,10 +11,12 @@ export interface HeaderProps {
 export const Header = ({ className }: HeaderProps) => {
     return (
         <div className={styles.header}>
+        <Link to={'/'} className={styles.logo}>
             <div className={styles.logo}>
                 <img className={styles.bydesignLogo} alt="" src={Q5U3ZLogomakrPng} />
                 <b className={styles.bydesigncode}>By Design</b>
             </div>
+            </Link>
             <div className={styles.header1}>
                 <div className={styles.button}>
                     <div className={styles.designs}>Designs</div>
