@@ -9,6 +9,8 @@ import {
 } from '@remix-run/react';
 import { ErrorComponent } from '~/components/error-component/error-component';
 import '~/styles/index.scss';
+import { HomePage } from '~/components/home-page/home-page';
+import styles from './root.module.scss';
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -30,8 +32,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
     return (
-        <div>
-            <Outlet />
+        <div className={styles.div1}>
+            <HomePage />
         </div>
     );
 }

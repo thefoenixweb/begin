@@ -1,8 +1,53 @@
 @import './reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 :root {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font, Manrope);
     line-height: 1.5;
     font-weight: 400;
     font-synthesis: none;
@@ -10,6 +55,22 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+
+        --background-primary: rgb(255, 255, 255);
+    --background-secondary: rgb(255, 255, 255, 0.1);
+    --background-tertiary: rgb(0, 0, 0, 0.05);
+    --button-foreground: rgb(255, 255, 255);
+    --container-background: rgb(255, 255, 255, 0.6);
+    --container-background-recessed: rgb(255, 255, 255, 0.9);
+    --container-background-secondary: rgb(255, 255, 255, 0.1);
+    --container-background-tertiary: rgb(255, 255, 255, 0.9);
+    --container-border: rgb(255, 255, 255, 0.5);
+    --container-border-secondary: rgb(255, 255, 255, 0.2);
+    --container-divider: rgb(0, 0, 0, 0.1);
+    --container-divider-secondary: rgb(0, 0, 0, 0.2);
+    --foreground-primary: rgb(0, 0, 0);
+    --foreground-secondary: rgb(0, 0, 0, 0.7);
+    --foreground-tertiary: rgb(0, 0, 0, 0.5);
 }
 
 body {

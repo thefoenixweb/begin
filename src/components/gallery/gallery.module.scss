@@ -1,0 +1,16 @@
+@import '../../../src/styles/theme.module.scss';
+
+
+.gallery {
+  	width: 100%;
+  	position: relative;
+  	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	gap: 30px;
+    max-width: 1100px;
+}
+
+

@@ -10,7 +10,7 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
 };
 
-export default function HomePage() {
+export function HomePage() {
     return (
         <div className={styles.root}>
             <h2>Welcome to your App Homepage 🎉</h2>
