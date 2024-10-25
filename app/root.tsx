@@ -13,7 +13,7 @@ import { HomePage } from '~/components/home-page/home-page';
 import styles from './root.module.scss';
 import { Route, Routes } from 'react-router-dom';
 import { MemoryRouter } from 'react-router-dom';
-import { Browser, Browser } from '~/components/browser/browser';
+import { Browser } from '~/components/browser/browser';
 import { Updates } from '~/components/updates/updates';
 
 export function Layout({ children }: { children: React.ReactNode }) {
