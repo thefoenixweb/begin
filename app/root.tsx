@@ -11,10 +11,6 @@ import { ErrorComponent } from '~/components/error-component/error-component';
 import '~/styles/index.scss';
 import { HomePage } from '~/components/home-page/home-page';
 import styles from './root.module.scss';
-import { Route, Routes } from 'react-router-dom';
-import { MemoryRouter } from 'react-router-dom';
-import { Browser } from '~/components/browser/browser';
-import { Updates } from '~/components/updates/updates';
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -36,13 +32,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
     return (
-        <MemoryRouter>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/browse" element={<Browser />} />
-                <Route path="/updates" element={<Updates />} />
-            </Routes>
-        </MemoryRouter>
+        <div className={styles.div1}>
+            <HomePage />
+        </div>
     );
 }
 
