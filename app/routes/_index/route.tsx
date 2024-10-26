@@ -5,9 +5,12 @@ import commonStyles from '~/styles/common-styles.module.scss';
 import { getUrlOriginWithPath } from '~/utils';
 import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
 import ViteSvg from '../../../src/assets/svg/vite.svg';
+import { BrowserRouter, Route} from 'react-router-dom';
+//import { HomePage } from '../../../src/components/home-page/home-page' 
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
-    return { canonicalUrl: getUrlOriginWithPath(request.url) };
+    //return { canonicalUrl: getUrlOriginWithPath(request.url) };
+    return '/'; 
 };
 
 export function HomePage() {
@@ -28,7 +31,7 @@ export function HomePage() {
     );
 }
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
+/*export const meta: MetaFunction<typeof loader> = ({ data }) => {
     const title = 'Blank Starter';
     const description = 'Welcome to the Blank Starter';
     const imageUrl = 'https://website-starter.com/og-image.png';
@@ -78,7 +81,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         },
     ];
 };
-
+*/
 export const links: LinksFunction = () => {
     return [
         {
