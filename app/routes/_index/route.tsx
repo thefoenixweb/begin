@@ -14,6 +14,7 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 export default function HomePage() { 
     return (
         <div/>
+        
     );
 }
 

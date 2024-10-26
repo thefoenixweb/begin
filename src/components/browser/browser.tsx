@@ -4,10 +4,10 @@ import { GalleryImage } from '../gallery-image/gallery-image';
 import ChevronDownSvg from '../../assets/chevron down.svg';
 import MagnifyingGlassSvg from '../../assets/magnifying glass.svg';
 
-import { Gallery } from '../gallery/gallery';
+//import { Gallery } from '../gallery/gallery';
 import { Footer } from '../footer/footer';
 
-import styles0 from './home-page.module.scss';
+//import styles0 from './home-page.module.scss';
 import { Header } from '../header/header';
 
 import HomeimageDark1 from '../../assets/homeimagedark1.jpeg';
@@ -38,7 +38,7 @@ export interface BrowserProps {
 
 
 export const Browser = ({ className }: BrowserProps) => {
-    return  <div className={classNames(styles.root, className)}>
+    return  (<div className={classNames(styles.root, className)}>
             
            
             <Header  selectedButton="Designs"/>
@@ -64,11 +64,11 @@ export const Browser = ({ className }: BrowserProps) => {
                     </div>
                 </div>
             </div>
-            <div className={styles.gallery}>
+           <div className={styles.gallery}>
                 {images.map((image, index) => (
                     <GalleryImage key={index} image={image.src} alt={image.alt} />
                 ))}
             </div>
             <Footer />
-        </div>
+        </div>);
 };

@@ -2,6 +2,9 @@ import {
     Links,
     Meta,
     Outlet,
+    //Routes,
+    //Route,
+    
     Scripts,
     ScrollRestoration,
     isRouteErrorResponse,
@@ -10,7 +13,13 @@ import {
 import { ErrorComponent } from '~/components/error-component/error-component';
 import '~/styles/index.scss';
 import { HomePage } from '~/components/home-page/home-page';
+
+ 
 import styles from './root.module.scss';
+import { Browser } from '~/components/browser/browser';
+import { MemoryRouter } from 'react-router';
+import {Routes, Route} from 'react-router-dom';
+//import {Links} from 'react-router-dom';
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -23,6 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </head>
             <body>
                 {children}
+                 <Outlet />
                 <ScrollRestoration />
                 <Scripts />
             </body>
@@ -33,8 +43,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
     return (
         <div className={styles.div1}>
-            <HomePage />
+        <MemoryRouter>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/browser" element={<Browser />} />
+            </Routes>
+        </MemoryRouter>
         </div>
+        
     );
 }
 
